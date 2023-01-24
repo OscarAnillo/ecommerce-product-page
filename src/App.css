@@ -10,3 +10,26 @@
   font-family: 'Kumbh Sans', sans-serif;
   text-align: center;
 }
+img {
+  max-width: 100%;
+}
+
+/* NavBarComponent */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.5em 0;
+}
+.desktop {
+  display: none;
+}
+.mobile-menu-icon {
+  margin-right: 1em;
+}
+.mobile-avatar {
+  height: 30px;
+  margin-left: 1em;
+}
