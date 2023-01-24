@@ -9,6 +9,7 @@
 .App {
   font-family: 'Kumbh Sans', sans-serif;
   text-align: center;
+  position: relative;
 }
 img {
   max-width: 100%;
@@ -32,4 +33,34 @@ img {
 .mobile-avatar {
   height: 30px;
   margin-left: 1em;
+}
+
+/* MobilePictureDisplay */
+.mobile-picture-div {
+  position: relative;
+}
+.prev-mobile {
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 3%;
+}
+
+.products {
+
+  width: 100%;
+}
+.next-mobile {
+  border: none;
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  position: absolute;
+  top: 45%;
+  right: 3%;
 }
