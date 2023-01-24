@@ -1,22 +1,10 @@
-import { useState } from "react";
-
-export const TextComponent = () => {
-  const [productAmount, setProductAmount] = useState(125);
-  const [productQuantity, setProductQuantity] = useState(1);
-
-  const clickHandlerNext = () => {
-    setProductAmount((prevState) => (prevState += 125));
-    setProductQuantity((prevState) => prevState + 1);
-  };
-
-  const clickHandlerPrev = () => {
-    if (productQuantity === 1) {
-      return;
-    }
-    setProductAmount((prevState) => (prevState -= 125));
-    setProductQuantity((prevState) => prevState - 1);
-  };
-
+export const TextComponent = ({
+  productAmount,
+  productQuantity,
+  clickHandlerPrev,
+  clickHandlerNext,
+  addToCart,
+}) => {
   return (
     <div className="text-component-div">
       <h3 className="sneaker-h3">Sneaker Company</h3>
@@ -53,7 +41,7 @@ export const TextComponent = () => {
           onClick={clickHandlerNext}
         />
       </button>
-      <button className="text-second-button">
+      <button className="text-second-button" onClick={addToCart}>
         <img src="images/icon-cart.svg" alt="" />
         <span>Add to Cart</span>
       </button>

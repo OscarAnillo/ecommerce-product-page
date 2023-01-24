@@ -1,4 +1,11 @@
-export const NavBarComponent = ({ showMobileMenu, clickHandlerMobileMenu }) => {
+export const NavBarComponent = ({
+  showMobileMenu,
+  clickHandlerMobileMenu,
+  addCart,
+  showCartMenu,
+  showCartMenuHandler,
+  productAmount,
+}) => {
   return (
     <nav className="nav">
       <div className="mobile">
@@ -11,8 +18,57 @@ export const NavBarComponent = ({ showMobileMenu, clickHandlerMobileMenu }) => {
         <img src="images/logo.svg" alt="" className="mobile-menu-logo" />
       </div>
       <div className="mobile">
-        <img src="images/icon-cart.svg" alt="" className="mobile-cart" />
+        {addCart.length !== 0 && (
+          <div className="cart-number">
+            {addCart.map((x) => (
+              <p key={x.id}>{x.value}</p>
+            ))}
+          </div>
+        )}
+        <img
+          src="images/icon-cart.svg"
+          alt=""
+          className="mobile-cart"
+          onClick={showCartMenuHandler}
+        />
         <img src="images/image-avatar.png" alt="" className="mobile-avatar" />
+        {showCartMenu && (
+          <div className="cart-menu-mobile">
+            <div>
+              <p className="cart-p">Cart</p>
+              <hr />
+              {addCart.length !== 0 ? (
+                <div className="cart-menu-row">
+                  <div>
+                    <img
+                      src="images/image-product-1-thumbnail.jpg"
+                      alt=""
+                      className="thumbnail"
+                    />
+                  </div>
+                  <div>
+                    <p>Fall Limited Edition Sneakers</p>
+                    <p>
+                      $125.00 x{" "}
+                      {addCart.map((x) => (
+                        <span>{x.value}</span>
+                      ))}
+                      = <strong>{productAmount}.00</strong>
+                    </p>
+                  </div>
+                  <div>
+                    <img src="images/icon-delete.svg" alt="" />
+                  </div>
+                </div>
+              ) : (
+                <p>Your cart is empty</p>
+              )}
+              {addCart.length !== 0 && (
+                <button className="checkout-btn">Checkout</button>
+              )}
+            </div>
+          </div>
+        )}
       </div>
       <div className="desktop">
         <img src="images/logo.svg" alt="" />
