@@ -11,6 +11,10 @@
   text-align: center;
   position: relative;
 }
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 img {
   max-width: 100%;
 }
@@ -63,4 +67,88 @@ img {
   position: absolute;
   top: 45%;
   right: 3%;
+}
+
+/* TextComponent */
+.text-component-div {
+  padding: 1.5  em 0 1em 0;
+  text-align: left;
+}
+.sneaker-h3 {
+  color: hsl(26, 100%, 55%);
+  font-weight: 700;
+  padding-top: 1em;
+}
+.sneaker-h1 {
+  font-weight: 700;
+  padding: .3em 0;
+}
+.sneaker-p {
+  color: hsl(219, 9%, 45%);
+  font-weight: 400;
+  line-height: 1.5rem;
+  padding-bottom: 1em;
+}
+.text-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.text-row h2 {
+  font-weight: 700;
+}
+.text-row h2 span {
+  background-color: hsl(25, 100%, 94%);
+  border-radius: 6px;
+  color: hsl(26, 100%, 55%);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: .5em;
+  padding: 3px 10px;
+}
+.text-row p del {
+  color: rgb(184, 187, 194);
+  font-weight: 700;
+}
+.text-first-button {
+  background-color: rgb(247, 248, 253);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 1px 2px 5px rgb(214, 213, 213);
+  padding: 1em;
+  width: 100%;
+  margin: 1em 0 .5em 0;
+  position: relative;
+}
+.minus-image {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+.prod-quantity {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.plus-image {
+  position: absolute;
+  top: 40%;
+  right: 5%;
+}
+.text-second-button {
+  background-color: hsl(26, 100%, 55%);
+  border: none;
+  border-radius: 6px;
+  box-shadow: 5px 5px 15px hsl(25, 100%, 94%);
+  padding: 1em;
+  width: 100%;
+  margin: 1em 0;
+}
+.text-second-button img {
+  filter: contrast(200%);
+}
+.text-second-button span {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-left: 1em;
 }
