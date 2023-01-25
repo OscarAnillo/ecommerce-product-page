@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { DesktopModal } from "./desktop-modal";
 
 const desktopPictures = [
   { src: "images/image-product-1.jpg" },
@@ -44,15 +45,33 @@ export const DesktopPictureDisplay = () => {
     });
   }, []);
 
+  useEffect(() => {
+    let modalTrigger = document.getElementById("modal-trigger");
+    let modalDiv = document.querySelector(".modal-div");
+    let close = document.getElementById("close");
+
+    modalTrigger.addEventListener("click", function () {
+      modalDiv.style.display = "block";
+    });
+    window.addEventListener("click", function (e) {
+      if (e.target === close) {
+        modalDiv.style.display = "none";
+      }
+    });
+  });
+
   return (
     <div className="desktop-picture-div">
       <div onClick={clickHandlerDesktopPicture}>
-        <img src={seeMobilePicture} alt="" />
+        <img src={seeMobilePicture} alt="" id="modal-trigger" />
         {desktopPictures.map((picture) => (
-          <div className="map-div-pictures">
+          <div className="map-div-pictures" key={picture.src}>
             <img src={picture.src} alt="" />
           </div>
         ))}
+      </div>
+      <div className="modal-div">
+        <DesktopModal />
       </div>
     </div>
   );
