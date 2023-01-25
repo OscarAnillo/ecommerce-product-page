@@ -258,3 +258,146 @@ img {
     height: 460px;
   }
 }
+
+@media(min-width: 1000px){
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+    /* border: 1px solid red; */
+  }
+  .nav {
+    width: 75%;
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .desktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  .list-items li {
+    color:hsl(219, 9%, 45%);
+    margin-right: 2em;
+    position: relative;
+    left: -60%;
+  }
+  .cart-number {
+    background-color: orange;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 700;
+    height: 20px;
+    width: 18px;
+    position: absolute;
+    right: 25%;
+  }
+  .desktop-avatar {
+    height: 50px;
+    margin-left: 1em;
+  }
+
+  /* MobilePictureDisplay */
+  .mobile-picture-div {
+    height: 0px;
+    display: none;
+  }
+  .desktop-picture-div {
+    /* border: 1px solid red; */
+    margin-top: 5em;
+    width: 60%;
+  }
+  .desktop-picture-div img {
+    border-radius: 20px;
+  }
+  .map-div-pictures {
+    display: inline-block;
+    width: 20%;
+    margin: 1em .86em;
+  }
+  .map-div-pictures img {
+    border-radius: 6px;
+  }
+
+  
+/* TextComponent */
+  .text-component-div {
+    padding: 0em;
+    width: 70%;
+    margin-left: 3em;
+    position: relative;
+  }
+  .sneaker-h3 {
+    font-size: 1.5rem;
+    padding-top: 0em;
+  }
+  .sneaker-h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    padding: .2em 0;
+    line-height: 60px;
+  }
+  .sneaker-p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding-bottom: 1.5em;
+    width: 80%;
+  }
+  .text-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-row h2 {
+    font-weight: 700;
+  }
+  .text-row h2 span {
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 6px;
+    color: hsl(26, 100%, 55%);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: .5em;
+    padding: 3px 10px;
+  }
+  .text-row p del {
+    color: rgb(184, 187, 194);
+    font-weight: 700;
+    position: absolute;
+    top: 77%;
+    left: 0;
+  }
+  .text-first-button {
+    background-color: rgb(247, 248, 253);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 2px 5px rgb(214, 213, 213);
+    padding: 1em;
+    width: 30%;
+    margin: 3em 0 .5em 0;
+    position: relative;
+  }
+  .prod-quantity {
+    font-size: 1.3rem;
+  }
+  .text-second-button {
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 5px 5px 15px hsl(25, 100%, 94%);
+    padding: 1.1em;
+    width: 50%;
+    margin: 1em 0 0 2em;
+  }
+  .text-second-button span {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 1em;
+  }
+}

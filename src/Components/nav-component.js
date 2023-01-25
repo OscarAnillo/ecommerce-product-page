@@ -73,7 +73,7 @@ export const NavBarComponent = ({
       <div className="desktop">
         <img src="images/logo.svg" alt="" />
       </div>
-      <div className="desktop">
+      <div className="desktop list-items">
         <ul>
           <li>Collections</li>
           <li>Men</li>
@@ -84,7 +84,7 @@ export const NavBarComponent = ({
       </div>
       <div className="desktop">
         <img src="images/icon-cart.svg" alt="" />
-        <img src="images/image-avatar.png" alt="" />
+        <img src="images/image-avatar.png" alt="" className="desktop-avatar" />
       </div>
       {showMobileMenu ? (
         <div className="main-open-menu-mobile">

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavBarComponent } from "./Components/nav-component";
 import { MobilePictureDisplay } from "./Components/mobile-picture-display";
 import { TextComponent } from "./Components/text-component";
+import { DesktopPictureDisplay } from "./Components/desktop-picture-display";
 
 import "./App.css";
 
@@ -51,6 +52,7 @@ function App() {
       />
       <MobilePictureDisplay />
       <div className="container">
+        <DesktopPictureDisplay />
         <TextComponent
           productAmount={productAmount}
           productQuantity={productQuantity}
