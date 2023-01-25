@@ -130,6 +130,9 @@ img {
   margin: 1.3em 0;
 }
 /* MobilePictureDisplay */
+.desktop-picture-div {
+  display: none;
+}
 .mobile-picture-div {
   position: relative;
   height: 360px;
@@ -256,5 +259,220 @@ img {
 
   .products {
     height: 460px;
+  }
+}
+
+@media(min-width: 1000px){
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1250px;
+    /* border: 1px solid red; */
+  }
+  .nav {
+    width: 75%;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+  }
+  .mobile {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
+  .desktop ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  .list-items li {
+    color:hsl(219, 9%, 45%);
+    margin-right: 2em;
+    position: relative;
+    left: -60%;
+    transition: .3s;
+  }
+  .list-items li:hover {
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+    cursor: pointer;
+  }
+  .cart-number {
+    background-color: hsl(26, 100%, 55%);
+    right: 15.9%;
+  }
+  .desktop-cart:hover {
+    cursor: pointer;
+  }
+  .desktop-avatar {
+    height: 50px;
+    margin-left: 1em;
+    transition: .3s;
+  }
+  .desktop-avatar:hover {
+    border: 10px solid hsl(26, 100%, 55%);
+    border-radius: 60px;
+    cursor: pointer;
+  }
+  .cart-menu-mobile {
+    background-color: #fff;
+    border-radius: 6px;
+    height: 300px;
+    position: absolute;
+    top: 10%;
+    left: 64%;
+    width: 465px;
+    z-index: 1;
+    box-shadow: 0px 5px 15px rgb(184, 187, 194);
+  }
+  .cart-menu-mobile > div {
+    text-align: left;
+    margin: 0 auto;
+    padding: 1em;
+  }
+  .cart-p {
+    padding-bottom: 1em;
+  }
+  .cart-menu-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2em;
+  }
+  .thumbnail {
+    border-radius: 6px;
+    height: 80px;
+    width: 100px;
+    margin-right: 0em;
+  }
+  .checkout-btn {
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 3em;
+    padding: 1em 0;
+    width: 100%;
+  }
+
+  /* MobilePictureDisplay */
+  .mobile-picture-div {
+    height: 0px;
+    display: none;
+  }
+  .desktop-picture-div {
+    display: block;
+    margin-top: 5em;
+    width: 60%;
+  }
+  .desktop-picture-div img {
+    border-radius: 20px;
+  }
+  .map-div-pictures {
+    display: inline-block;
+    width: 110px;
+    margin: 1em .86em;
+  }
+  .map-div-pictures img {
+    border-radius: 6px;
+    transition: .3s;
+  }
+  .map-div-pictures img:hover {
+    cursor: pointer;
+    opacity: .65;
+  }
+
+  .active {
+    border: 3px solid hsl(26, 100%, 55%);
+    border-radius: 6px;
+    opacity: .5;
+  }
+
+  
+/* TextComponent */
+  .text-component-div {
+    padding: 0em;
+    width: 70%;
+    margin-left: 3em;
+    position: relative;
+  }
+  .sneaker-h3 {
+    font-size: 1.5rem;
+    padding-top: 0em;
+  }
+  .sneaker-h1 {
+    font-weight: 700;
+    font-size: 3.5rem;
+    padding: .2em 0;
+    line-height: 60px;
+  }
+  .sneaker-p {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    padding-bottom: 1.5em;
+    width: 80%;
+  }
+  .text-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .text-row h2 {
+    font-weight: 700;
+  }
+  .text-row h2 span {
+    background-color: hsl(25, 100%, 94%);
+    border-radius: 6px;
+    color: hsl(26, 100%, 55%);
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: .5em;
+    padding: 3px 10px;
+  }
+  .text-row p del {
+    color: rgb(184, 187, 194);
+    font-weight: 700;
+    position: absolute;
+    top: 77%;
+    left: 0;
+  }
+  .text-first-button {
+    background-color: rgb(247, 248, 253);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 2px 5px rgb(214, 213, 213);
+    padding: 1em;
+    width: 30%;
+    margin: 3em 0 .5em 0;
+    position: relative;
+  }
+  .minus-image:hover {
+    cursor: pointer;
+  }
+  .plus-image:hover {
+    cursor: pointer;
+  }
+  .prod-quantity {
+    font-size: 1.3rem;
+  }
+  .text-second-button {
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 6px;
+    box-shadow: 5px 5px 15px hsl(25, 100%, 94%);
+    padding: 1.1em;
+    width: 50%;
+    margin: 1em 0 0 2em;
+  }
+  .text-second-button:hover {
+    cursor: pointer;
+  }
+  .text-second-button span {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: 1em;
   }
 }
