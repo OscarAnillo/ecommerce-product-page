@@ -494,7 +494,7 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 710px;
+    height: 650px;
     width: 570px;
   }
   #close {
@@ -505,6 +505,7 @@ img {
     right: 0;
   }
   #close:hover {
+    color: hsl(26, 100%, 55%);
     cursor: pointer;
   }
 }
